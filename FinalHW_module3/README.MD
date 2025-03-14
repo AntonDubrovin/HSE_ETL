@@ -3,7 +3,7 @@
 Запуск всего нужного в докере:
 ```docker-compose up -d```
 
-После чего надо сгенерировать данные в MongoDB с помощью запуска mongo/entities/generate_data.py
+После чего надо сгенерировать данные в MongoDB с помощью запуска ```mongo/entities/generate_data.py```
 По итогу у нас будет:
 1. UserSessions, сессии пользователей:
  - session_id — уникальный идентификатор сессии;
@@ -68,16 +68,16 @@
 
 ![docker ps](./docker-ps.png)
 
-Из этого нам необходимо взять CONTAINER ID у postgres, в данном примере f858f7b3dafc.
+Из этого нам необходимо взять CONTAINER ID у postgres, в данном примере ```f858f7b3dafc```.
 
-Выполняем: docker exec -it f858f7b3dafc psql -U airflow -d airflow
+Выполняем: ```docker exec -it f858f7b3dafc psql -U airflow -d airflow```
 
-С помощью этой команды мы заходим внутрь PostgreSQL, чтобы создать таблицы из файла postgre/create_tables.sql
+С помощью этой команды мы заходим внутрь PostgreSQL, чтобы создать таблицы из файла ```postgre/create_tables.sql```
 
 
-Далее, заходим по ссылке http://localhost:8080 в airflow
+Далее, заходим по ссылке ```http://localhost:8080``` в airflow
 
-Там будет DAG с названием mongo_to_postgres_replication
+Там будет DAG с названием ```mongo_to_postgres_replication```
 
 Для ручного запуска справа в Actions необходимо запустить Trigger DAG
 
