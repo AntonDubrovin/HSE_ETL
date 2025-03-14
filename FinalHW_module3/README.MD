@@ -71,21 +71,16 @@ docker-compose up -d
 Из этого нам необходимо взять CONTAINER ID у postgres, в данном примере f858f7b3dafc.
 
 Выполняем: docker exec -it f858f7b3dafc psql -U airflow -d airflow
+
 С помощью этой команды мы заходим внутрь PostgreSQL, чтобы создать таблицы из файла postgre/create_tables.sql
 
 
 Далее, заходим по ссылке http://localhost:8080 в airflow
+
 Там будет DAG с названием mongo_to_postgres_replication
+
 Для ручного запуска справа в Actions необходимо запустить Trigger DAG
+
 После выполнения задания можно зайти в LOG таски, чтобы проверить успешность выполнения репликации. В корректном случае вывод будет следующим(Пример):
-[2025-03-14, 16:27:26 UTC] {logging_mixin.py:137} INFO - Репликация UserSessions -> user_sessions завершена. Записей: 1300
-[2025-03-14, 16:27:26 UTC] {logging_mixin.py:137} INFO - Репликация ProductPriceHistory -> product_price_history завершена. Записей: 600
-[2025-03-14, 16:27:26 UTC] {logging_mixin.py:137} INFO - Репликация EventLogs -> event_logs завершена. Записей: 2400
-[2025-03-14, 16:27:26 UTC] {logging_mixin.py:137} INFO - Репликация SupportTickets -> support_tickets завершена. Записей: 1100
-[2025-03-14, 16:27:27 UTC] {logging_mixin.py:137} INFO - Репликация UserRecommendations -> user_recommendations завершена. Записей: 330
-[2025-03-14, 16:27:27 UTC] {logging_mixin.py:137} INFO - Репликация ModerationQueue -> moderation_queue завершена. Записей: 500
-[2025-03-14, 16:27:27 UTC] {logging_mixin.py:137} INFO - Репликация SearchQueries -> search_queries завершена. Записей: 450
-[2025-03-14, 16:27:27 UTC] {python.py:177} INFO - Done. Returned value was: None
-[2025-03-14, 16:27:27 UTC] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=mongo_to_postgres_replication, task_id=replicate_all_collections, execution_date=20250314T162724, start_date=20250314T162726, end_date=20250314T162727
-[2025-03-14, 16:27:27 UTC] {local_task_job.py:208} INFO - Task exited with return code 0
-[2025-03-14, 16:27:27 UTC] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+
+![airflow logs](./airflow_.png)
