@@ -1,0 +1,7 @@
+Тут будут ваши логи при запуске airflow
+Пример:
+airflow/logs/dag_id=mongo_to_postgres_replication/run_id=manual__2025-03-14T154854.402816+0000/task_id=replicate_all_collections/attempt=1.log
+airflow/logs/dag_id=mongo_to_postgres_replication/run_id=manual__2025-03-14T155724.901130+0000/task_id=replicate_all_collections/attempt=1.log
+airflow/logs/dag_id=mongo_to_postgres_replication/run_id=manual__2025-03-14T162724.289940+0000/task_id=replicate_all_collections/attempt=1.log
+airflow/logs/dag_processor_manager/dag_processor_manager.log
+airflow/logs/scheduler/2025-03-14/mongo_to_postgres_replication.py.log
