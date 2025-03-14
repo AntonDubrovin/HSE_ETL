@@ -1,7 +1,7 @@
 Итоговое ДЗ по ETL по модулю 3.
 
 Запуск всего нужного в докере:
-docker-compose up -d
+```docker-compose up -d```
 
 После чего надо сгенерировать данные в MongoDB с помощью запуска mongo/entities/generate_data.py
 По итогу у нас будет:
