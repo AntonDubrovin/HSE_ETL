@@ -66,11 +66,7 @@ docker-compose up -d
 
 Во-первых, нужно выполнить docker ps, должны получить что-то типа:  
 
-CONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS                    PORTS                      NAMES  
-2b3c7d4474f6   finalhw_module3-airflow-scheduler   "/usr/bin/dumb-init …"   12 minutes ago   Up 11 minutes             8080/tcp                   finalhw_module3-airflow-scheduler-1  
-c179e8a854de   finalhw_module3-airflow-webserver   "/usr/bin/dumb-init …"   12 minutes ago   Up 11 minutes             0.0.0.0:8080->8080/tcp     finalhw_module3-airflow-webserver-1  
-f858f7b3dafc   postgres:13                         "docker-entrypoint.s…"   12 minutes ago   Up 12 minutes (healthy)   5432/tcp                   finalhw_module3-postgres-airflow-1  
-450bb4a56e47   mongo:latest                        "docker-entrypoint.s…"   12 minutes ago   Up 12 minutes             0.0.0.0:27017->27017/tcp   finalhw_module3-mongo-1  
+![docker ps](./docker-ps.png)
 
 Из этого нам необходимо взять CONTAINER ID у postgres, в данном примере f858f7b3dafc.
 
