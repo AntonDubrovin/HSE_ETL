@@ -1,0 +1,34 @@
+{
+  "cats": [
+    {
+      "name" : "Purrsloud",
+      "species" : "Cat",
+      "favFoods" : ["wet food", "dry food", "any food"],
+      "birth_date" : "2016-01-01",
+      "photo" : "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+    },
+    {
+      "name" : "Meowsalot",
+      "species" : "Cat",
+      "favFoods" : ["tuna", "catnip", "celery"],
+      "birth_date" : "2016-01-03",
+      "photo" : "https://learnwebcode.github.io/json-example/images/cat-1.jpg"
+    }
+  ],
+  "dogs": [
+    {
+      "name" : "Barksalot",
+      "species" : "Dog",
+      "favFoods" : ["meat", "bones", "other dog's food"],
+      "birth_date" : "2016-01-05",
+      "photo" : "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
+    },
+    {
+      "name" : "DogDogg",
+      "species" : "Dog",
+      "favFoods" : ["fish", "bones"],
+      "birth_date" : "2016-01-07",
+      "photo" : "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
+    }
+  ]
+}
